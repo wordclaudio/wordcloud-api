@@ -1,0 +1,7 @@
+version: "3"
+services:
+  wordcloud:
+    image: gcr.io/wordcloud-265518/wordcloud-api
+    build: .
+    ports:
+      - 5000:5000

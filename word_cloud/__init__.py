@@ -1,0 +1,1 @@
+from .core import generate_wordcloud_from_chat

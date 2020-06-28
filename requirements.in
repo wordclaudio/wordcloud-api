@@ -1,0 +1,7 @@
+flask
+flask_cors
+gunicorn    
+nltk
+pandas
+scikit-learn
+wordcloud
