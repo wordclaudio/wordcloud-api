@@ -23,9 +23,9 @@ def file_upload():
     return "Done."
 
 
-def generate_word_cloud(filename):
+def generate_word_cloud(uuid):
     destination_folder = os.path.join(UPLOAD_FOLDER, "word_cloud")
-    path = "/".join([destination_folder, filename])
+    path = "/".join([destination_folder, uuid])
     generate_wordcloud_from_chat(path)
     return "WordCloud Generated"
 
@@ -34,6 +34,7 @@ def generate_word_cloud(filename):
 def download_file():
     uuid = secure_filename(request.args.get("fileName"))
     destination_folder = os.path.join(UPLOAD_FOLDER, "word_cloud")
+    generate_word_cloud(uuid)
     image_file = uuid + ".png"
     path = "/".join([destination_folder, image_file])
     return send_file(
