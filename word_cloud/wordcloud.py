@@ -19,4 +19,4 @@ class WordCloudGenerator:
             colormap="RdBu",
         )
         wc.generate(text)
-        wc.to_file(uuid + ".png")
+        return wc

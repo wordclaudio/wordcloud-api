@@ -1,6 +1,7 @@
+backoff
 flask
 flask_cors
-gunicorn    
+gunicorn   
 nltk
 pandas
 scikit-learn

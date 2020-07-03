@@ -7,4 +7,4 @@ def generate_wordcloud_from_chat(uuid):
     preprocessed_text = TextLoader().load_text(uuid + ".txt")
     keywords = NLP().get_keywords(preprocessed_text)
     text = " ".join(keywords)
-    WordCloudGenerator().generate_wordcloud_from_text(text, uuid)
+    return WordCloudGenerator().generate_wordcloud_from_text(text, uuid)
